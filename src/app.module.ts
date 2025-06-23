@@ -9,13 +9,13 @@ import { DiseaseDataModule } from './disease-data/disease-data.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: 'root',
-      database: 'health_intelligence_guardian',
+      host: process.env.DB_HOST,
+      port: Number(process.env.DB_PORT),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       autoLoadEntities: true,
-      synchronize: true, // dev mode only
+      synchronize: true, // only use in dev
     }),
     HealthMoniteringModule,
     AuthModule,
