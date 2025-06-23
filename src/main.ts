@@ -6,7 +6,10 @@ async function bootstrap() {
 
   // ✅ Enable CORS for frontend origin (e.g., Vite, React, etc.)
   app.enableCors({
-    origin: 'http://localhost:5173',
+    origin: [
+      'http://localhost:5173',
+      'https://precious-hamster-eb01f4.netlify.app',
+    ],
     credentials: true, // if using cookies/auth headers
   });
 
