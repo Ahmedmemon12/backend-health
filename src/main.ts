@@ -9,6 +9,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:5173',
       'https://precious-hamster-eb01f4.netlify.app',
+      'https://68596c6c18651508c349a0cd--precious-hamster-eb01f4.netlify.app/',
     ],
     credentials: true, // if using cookies/auth headers
   });
